@@ -1,49 +1,55 @@
 import sys
 
-print("Введите что-нибудь")
+print("Введите что-нибудь\n")
 choose_programm = 0
 for i in sys.stdin:
     choose_programm = int(input("Введите целочисленное число для выбора программы (1 - найти скорость; "
                                 "2 - найти массу; 3 -перевести фаренгейты в цельсии;"
                                 "4 - найти работы; 5 - найти кинетическую энергию; 6 - найти потенциальную"
-                                "энергию; 7 - найти давление)"))
+                                "энергию; 7 - найти давление; 8 - найти теплоту) \n"))
 
     if i == 'q\n':
         exit(0)
 
     if choose_programm == 1:
-        long = float(input('Введите расстояние в км'))
-        time = float(input('Введите время в часах'))
-        print("Скорость = ", long/time, ' м/с')
+        long = float(input('Введите расстояние в км\n'))
+        time = float(input('Введите время в часах\n'))
+        print("Скорость = ", long/time, ' км/с\n')
 
     elif choose_programm == 2:
-        Force = float(input("Введите силу в Н"))
-        acceleration = float(input("Введите ускорение в м/с^2"))
-        print("Масса = ", Force/acceleration, " кг")
+        Force = float(input("Введите силу в Н\n"))
+        acceleration = float(input("Введите ускорение в м/с^2\n"))
+        print("Масса = ", Force/acceleration, " кг\n")
 
     elif choose_programm == 3:
-        Temperature_Farengeyt = float(input("Введите температуру в фаренгейтах"))
-        print("Температура в цельсия = ", (Temperature_Farengeyt - 32)*5/9)
+        Temperature_Farengeyt = float(input("Введите температуру в фаренгейтах\n"))
+        print("Температура в цельсия = ", (Temperature_Farengeyt - 32)*5/9, "\n")
 
     elif choose_programm == 4:
-        Force = float(input("Введите силу в Н"))
-        long = float(input('Введите расстояние в м'))
-        print("Работа = ", Force * long, ' Дж')
+        Force = float(input("Введите силу в Н\n"))
+        long = float(input('Введите расстояние в м\n'))
+        print("Работа = ", Force * long, ' Дж\n')
 
     elif choose_programm == 5:
-        mass = float(input("Введите массу в кг"))
-        speed = float(input('Введите скосроть в м/с'))
-        print("Кинетическая энергия = ", mass * speed**2/2, ' Дж')
+        mass = float(input("Введите массу в кг\n"))
+        speed = float(input('Введите скосроть в м/с\n'))
+        print("Кинетическая энергия = ", mass * speed**2/2, ' Дж\n')
 
     elif choose_programm == 6:
-        mass = float(input("Введите массу в кг"))
-        acceleration_g = float(input("Введите ускорение свободного падения в м/с^2"))
-        high = float(input('Введите высоту в м'))
-        print("Потенциальная энергия = ", mass * acceleration_g * high, ' Дж')
+        mass = float(input("Введите массу в кг\n"))
+        acceleration_g = float(input("Введите ускорение свободного падения в м/с^2\n"))
+        high = float(input('Введите высоту в м\n'))
+        print("Потенциальная энергия = ", mass * acceleration_g * high, ' Дж\n')
 
     elif choose_programm == 7:
-        square = float(input("Введите площадь в м^2"))
-        Force = float(input("Введите силу в Н"))
-        print("Давление = ", Force/square, ' Па')
+        square = float(input("Введите площадь в м^2\n"))
+        Force = float(input("Введите силу в Н\n"))
+        print("Давление = ", Force/square, ' Па\n')
 
-    print("Введите что-нибудь")
+    elif choose_programm == 8:
+        mass = float(input("Введите массу в кг\n"))
+        latent_heat = float(input("Введите удльную теплоемкость в Дж/кг/цельсия\n"))
+        change_temperature = float(input("Введите изменение температуры\n"))
+        print("Теплота = ", mass * latent_heat * change_temperature, ' Дж\n')
+
+    print("Введите что-нибудь\n")
