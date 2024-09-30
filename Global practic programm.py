@@ -6,7 +6,7 @@ for i in sys.stdin:
     choose_programm = int(input("Введите целочисленное число для выбора программы (1 - найти скорость; "
                                 "2 - найти массу; 3 -перевести фаренгейты в цельсии;"
                                 "4 - найти работы; 5 - найти кинетическую энергию; 6 - найти потенциальную"
-                                "энергию)"))
+                                "энергию; 7 - найти давление)"))
 
     if i == 'q\n':
         exit(0)
@@ -38,7 +38,12 @@ for i in sys.stdin:
     elif choose_programm == 6:
         mass = float(input("Введите массу в кг"))
         acceleration_g = float(input("Введите ускорение свободного падения в м/с^2"))
-        high = float(input('Введите высоту в км'))
-        print("Потенциальная энергия энергия = ", mass * acceleration_g * high, ' Дж')
+        high = float(input('Введите высоту в м'))
+        print("Потенциальная энергия = ", mass * acceleration_g * high, ' Дж')
+
+    elif choose_programm == 7:
+        square = float(input("Введите площадь в м^2"))
+        Force = float(input("Введите силу в Н"))
+        print("Давление = ", Force/square, ' Па')
 
     print("Введите что-нибудь")
